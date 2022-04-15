@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  // Добавляем или изменяем значение:
+  localStorage.setItem('myKey', 'myValue'); // Теперь у вас в localStorage храниться ключ "myKey" со значением "myValue"
+
+  // Выводим его в консоль:
+  let localValue = localStorage.getItem('myKey');
+  console.log(localValue);  // "myValue"
+
+  // Удаляем:
+  localStorage.removeItem("myKey");
+
+  // Очищаем всё хранилище
+  localStorage.clear()
+
+  // То же самое, только с квадратными скобками:
+
+  // localStorage["Ключ"] = "Значение" //установка значения
+  // localStorage["Ключ"] // Получение значения
+  // delete localStorage["Ключ"] // Удаление значения
+
+  // Также хочется отметить, что localStorage отлично работает и с вложенными структурами, например, объектами.
+  let obj = {
+    item1: 1,
+    item2: [1, "two", 3.0],
+    item3: "hello"
+  }
+  let serialObj = JSON.stringify(obj);  // Сериализуем его
+  localStorage.setItem("myKey", serialObj);  // Запишем его в хранилище по ключу "myKey"
+  let returnObj = JSON.parse(localStorage.getItem("myKey"))  // Спарсим его обратно в объект
+  console.log(returnObj)  // Выведем в консоль
+</script>
+
+</body>
+</html>

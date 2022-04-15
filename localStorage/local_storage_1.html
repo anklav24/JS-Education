@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>localStorage</title>
+</head>
+<body>
+
+<script>
+
+  let was_i_here = "";
+  let me1 = 1;
+  try {
+    was_i_here = localStorage.getItem("me1");
+  } catch {
+  }
+  if (was_i_here === "1") {
+    document.writeln("I've been here!");
+  } else {
+    document.writeln("I'm a new")
+    localStorage.setItem("me1", "1");
+  }
+
+  let me = "Hi, I've been here!"
+  localStorage.setItem("me", me);
+</script>
+
+</body>
+</html>

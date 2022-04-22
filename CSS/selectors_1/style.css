@@ -1,0 +1,43 @@
+/*https://www.w3schools.com/cssref/css_selectors.asp*/
+/*https://www.w3schools.com/cssref/trysel.asp*/
+/* * - все теги */
+/* h - конкретный тег */
+/* h, li, a - несколько тегов */
+/* . - классы */
+/* .your_class_name - класс */
+/* .your_firs_class_name.your_second_class_name - содержит несколько классов */
+/* .your_firs_class_name + your_second_class_name - следующий класс после найденного */
+/* # - id, ид должны быть уникальны, к ид лучше не применять стили */
+/* a[href="http://google.com"] Выбор по атрибуту у тегов "а" */
+
+.link {
+    color: red;
+    text-decoration: none;
+}
+
+.link.active {
+    font-weight: bold;
+}
+
+.button {
+    font-size: 20px;
+    margin: 0;
+    background-color: #fff;
+    border: 1px solid gray;
+}
+
+.container {
+    display: flex;
+}
+
+.button + .button {
+    margin-left: 20px
+}
+
+.button + button {
+    font-size: xxx-large;
+}
+
+body {
+    background-color: antiquewhite;
+}

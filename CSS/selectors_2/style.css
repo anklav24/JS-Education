@@ -1,0 +1,62 @@
+/* https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Selectors */
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+}
+
+tr:nth-child(3n+1) {  /* Каждый третий элемент начиная с первого
+/*tr:nth-child(odd) {*/
+    background-color: lightgray;
+}
+tr:hover {
+   background-color: gray;
+}
+
+header, .second_block, .links {
+    text-align: center;
+}
+
+/* Ссылка в которой один из классов равен искомому*/
+a[class~=passive] {
+    color: red;
+}
+
+.active:hover {
+    text-decoration: line-through;
+}
+
+
+/*Псевдо класс*/
+.links .link-internal:not(:first-child) {
+    font-size: xx-large;
+}
+
+/*Псевдо класс*/
+.links .link-internal:first-child {
+    font-size: small;
+}
+
+/* Обращение по атрибуту
+*=любое вхождение
+|=полное совпадение
+^= в начале строки
+$=в конце строки */
+img[src$='.jpg'] {
+    margin-top: 5vh;
+}
+
+div:empty {
+    padding: 20px;
+    background-color: antiquewhite;
+}
+
+div:empty:hover {
+    padding: 20px;
+    background-color: lightgoldenrodyellow;
+}
